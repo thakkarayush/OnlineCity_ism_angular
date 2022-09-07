@@ -21,8 +21,9 @@
                         <i class=""><img src="assets\icon\hospital.svg" width="50" height="50"> </i>
                         
                         <h4 class="mb-3">Hospitals</h4>
-                        <input type="hidden" value="hospital" name="search">
+                        <input type="text" ng-model="hospital" formControlName="service" style="display: none;"/>
                         <button class="btn btn-outline-danger btn-round-full" type="submit" (click)="hospitalSearch()" >  Search </button>
+                        
                     </div>
                 </div>
     
@@ -174,7 +175,7 @@
                     <div class="service-item mb-5">
                         <i class=""><object data="assets\icon\mechanic.png" width="60" height="60"></object></i>
                         <h4 class="mb-3">Mechanics</h4>
-                        <input type="hidden" formControlName="service">
+                        
                         <button class="btn btn-outline-danger btn-round-full" type="submit" (click)="mechanicSearch()">    Search  </button>
                     </div>
                 </div>

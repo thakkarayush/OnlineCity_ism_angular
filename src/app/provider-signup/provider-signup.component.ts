@@ -33,6 +33,7 @@ export class ProviderSignupComponent implements OnInit {
 
   providerSignup(){
     console.log(this.providerSignupForm.value);
+    localStorage.setItem("availableservices",this.providerSignupForm.value)
     this.sessionService.providerSignupApi(this.providerSignupForm.value).subscribe(res=>{
       if(res){
         localStorage.setItem("email",res.data.email)

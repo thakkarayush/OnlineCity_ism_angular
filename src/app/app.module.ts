@@ -19,6 +19,9 @@ import { UploadProfileComponent } from './upload-profile/upload-profile.componen
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AvailableServiceComponent } from './available-service/available-service.component';
 import { ServiceListComponent } from './service-list/service-list.component';
+import { DialogModule } from "primeng/dialog";
+import { LogoutComponent } from './logout/logout.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { ServiceListComponent } from './service-list/service-list.component';
     UploadProfileComponent,
     ForgotPasswordComponent,
     AvailableServiceComponent,
-    ServiceListComponent
+    ServiceListComponent,
+    LogoutComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,7 @@ import { ServiceListComponent } from './service-list/service-list.component';
     ToastrModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule,
+    DialogModule
 
   ],
   providers: [],

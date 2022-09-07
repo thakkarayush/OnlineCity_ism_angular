@@ -16,27 +16,24 @@ export class AvailableServiceComponent implements OnInit {
   constructor(private searchProvider: SearchproviderService, private toastr: ToastrService, private router: Router) {
     this.searchForm = new FormGroup({
       pincode: new FormControl(''),
-      service: new FormControl('hospital')
+      service: new FormControl('')
     })
     
    }
 
   ngOnInit(): void {
+    
   }
 
-  hospitalSearch(){
-    console.log(this.searchForm.value);
+   hospitalSearch(){
+    this.searchForm.value.service='hospital'
     
-    this.searchProvider.searchHospitalApi(this.searchForm.value).subscribe(resp=>{
+    this.searchProvider.searchServiceApi(this.searchForm.value).subscribe(resp=>{
       console.log(resp);
-      
-      // if(resp.data.pincode!=null || resp.data.service!=null){
-      //   console.log(this.searchForm.value);
-      //   this.router.navigateByUrl("/listservice")
-      //   this.toastr.success("Service provider found")
-      // }else{
-      //   this.toastr.error("service provider not found")
-      // }
+      localStorage.setItem("availableservice", JSON.stringify(resp));
+         console.log(this.searchForm.value);
+         this.router.navigateByUrl("/listservice")
+         this.toastr.success("Service provider found")
       
     },err=>{
       this.toastr.error("service provider not found")
@@ -44,16 +41,14 @@ export class AvailableServiceComponent implements OnInit {
   }
   
   mechanicSearch(){
-    console.log(this.searchForm.value);
+    this.searchForm.value.service='mechanic'
     
-    this.searchProvider.searchMechanicApi(this.searchForm.value).subscribe(resp=>{
-      if(resp.pincode!=null || resp.service!=null){
+    this.searchProvider.searchServiceApi(this.searchForm.value).subscribe(resp=>{
+      console.log(resp);
+    
         console.log(this.searchForm.value);
         this.router.navigateByUrl("/listservice")
         this.toastr.success("Service provider found")
-      }else{
-        this.toastr.error("service provider not found")
-      }
        
     },err=>{
       this.toastr.error("service provider not found")

@@ -81,9 +81,37 @@
                                 Enter pincode</span>
                             </div>
 
+                            
+
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" formControlName="service" id="service" placeholder="Your service"/>
+                                <!-- <input type="text" formControlName="service" id="service" placeholder="Your service"/> -->
+                                <select formControlName="service">
+                                    <option value="hospital">Hospital</option>
+                                    <option value="pharmacy">Pharmacy</option>
+                                    <option value="banks">Banks</option>
+                                    <option value="grocerystore">Grocery Store</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="stationary">Stationary</option>
+                                    <option value="houseforrent">House for rent</option>
+                                    <option value="school">School</option>
+                                    <option value="college">College</option>
+                                    <option value="transportation">Transportation</option>
+                                    <option value="petrolpump">Petrol Pump</option>
+                                    <option value="theaters">Theaters</option>
+                                    <option value="gyms">Gyms</option>
+                                    <option value="gardens">Gardens</option>
+                                    <option value="maids">Maids</option>
+                                    <option value="tuitionteacher">Tuition Teacher</option>
+                                    <option value="laundry">Laundry</option>
+                                    <option value="mechanics">Mechanics</option>
+                                    <option value="keymakers">Key Makers</option>
+                                    <option value="electricians">Electricians</option>
+                                    <option value="carpenter">Carpenter</option>
+                                    <option value="plumber">Plumber</option>
+                                    <option value="milkmans">Milkmans</option>
+                                    <option value="paperboys">Paperboys</option>
+                                </select>
                                 <span class="err"
                                 *ngIf="providerSignupForm.get('service')?.touched  && providerSignupForm.get('service')?.hasError('required')">Please
                                 Enter service</span>

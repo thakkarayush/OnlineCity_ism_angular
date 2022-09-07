@@ -4,10 +4,12 @@ import { AvailableServiceComponent } from './available-service/available-service
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { ProviderSignupComponent } from './provider-signup/provider-signup.component';
 import { ServiceListComponent } from './service-list/service-list.component';
 import { SignupComponent } from './signup/signup.component';
 import { UploadProfileComponent } from './upload-profile/upload-profile.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 const routes: Routes = [
   {component: HomeComponent,path:"home"},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {component: ForgotPasswordComponent, path:"forgotpassword"},
   {component: UploadProfileComponent, path:"uploadprofile"},
   {component: AvailableServiceComponent, path:"service"},
-  {component: ServiceListComponent, path:"listservice"}
+  {component: ServiceListComponent, path:"listservice"},
+  {component: LogoutComponent,path:"logout"},
+  {component: ViewProfileComponent,path:"viewprofile"}
 ];
 
 @NgModule({

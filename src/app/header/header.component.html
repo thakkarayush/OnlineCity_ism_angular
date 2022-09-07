@@ -38,10 +38,19 @@
 			   
 			   <li class="nav-item"><a class="nav-link" routerLink="/providersignup">Register As A Professional</a></li>
 			</ul>
-
+			<div *ngIf="!firstName">
+				<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+				  <a routerLink="/login" class="btn btn-solid-border btn-round-full">Login/Sign Up</a>
+				 
+				</form>
+			</div>
+		  <div *ngIf="firstName" style="color:white">Welcome , {{firstName | uppercase }}
 			<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-			  <a routerLink="/login" class="btn btn-solid-border btn-round-full">Login/Sign Up</a>
-			</form>
+				
+				<a routerLink="/logout" class="btn btn-solid-border btn-round-full">Logout</a>
+			  </form>
+		  </div>
+		 
 		  </div>
 		</div>
 	</nav>
