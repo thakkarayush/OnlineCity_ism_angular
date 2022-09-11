@@ -38,5 +38,20 @@ export class SessionService {
   resetpassword(passwordbean:any):Observable<any>{
     return this.http.post(environment.url+"user/forgot",passwordbean)
   }
+  deleteUser(userId:any):Observable<any>{
+    return this.http.delete(environment.url+ "user/delete/"+userId)
+  }
+  deleteProvider(providerId:any):Observable<any>{
+    return this.http.delete(environment.url+"serviceprovider/delete/"+providerId)
+  }
+  getallSp():Observable<any>{
+    return this.http.get(environment.url+"serviceprovider/getallSp" )
+  }
+  getallUsers():Observable<any>{
+    return this.http.get(environment.url+"user/getallUsers" )
+  }
 
+  userDetail(userId:any):Observable<any>{
+    return this.http.get(environment.url+ "user/details/"+userId)
+  }
 }

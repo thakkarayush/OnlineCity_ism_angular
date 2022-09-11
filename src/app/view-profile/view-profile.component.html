@@ -1,6 +1,6 @@
 <p>view-profile works!</p>
- <!-- {{service}} -->
-{{service}}
+
+
 <table class="table table-bordered">
     <tr>
         <td>AccountName</td>
@@ -9,15 +9,15 @@
         <td>Action</td>
     </tr>
 
-     <!-- <tr *ngFor="let s of service">
-        <td>{{s.user.firstName}}</td> -->
-        <!-- <td>
+     <tr *ngFor="let u of userData">
+        <td>{{u.userId}}</td>
+        <td>
             
-            {{account.balance | currency:account.currency}}
+            {{u.lastName}}
 
         </td>
-        <td>{{account.currency}}</td>
-        <td><a routerLink="/user/addpayment/{{account.accountId}}">AddPayment</a></td> -->
-    <!-- </tr> -->
+       
+        <!-- <td><a routerLink="/user/addpayment/{{u.accountId}}">AddPayment</a></td> --> -->
+    </tr>
 
 </table>

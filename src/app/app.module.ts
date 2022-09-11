@@ -5,8 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,12 +20,17 @@ import { ServiceListComponent } from './service-list/service-list.component';
 import { DialogModule } from "primeng/dialog";
 import { LogoutComponent } from './logout/logout.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { ProviderDashboardComponent } from './provider/provider-dashboard/provider-dashboard.component';
+import { ProviderLoginComponent } from './provider/provider-login/provider-login.component';
+import { AdminComponent } from './admin/admin.component';
+import { ListusersComponent } from './listusers/listusers.component';
+import { ListproviderComponent } from './listprovider/listprovider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-    DashboardComponent,
+    
+    
     FooterComponent,
     NavbarComponent,
     HeaderComponent,
@@ -40,7 +43,12 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
     AvailableServiceComponent,
     ServiceListComponent,
     LogoutComponent,
-    ViewProfileComponent
+    ViewProfileComponent,
+    ProviderDashboardComponent,
+    ProviderLoginComponent,
+    AdminComponent,
+    ListusersComponent,
+    ListproviderComponent
   ],
   imports: [
     BrowserModule,

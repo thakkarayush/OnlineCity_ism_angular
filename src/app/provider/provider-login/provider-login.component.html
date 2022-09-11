@@ -35,26 +35,7 @@ height: 100%;
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form class="m-0" [formGroup]="loginform" (ngSubmit)="login()"
                 novalidate>
-                 <!-- <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                  <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button> 
-      
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-      
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-linkedin-in"></i>
-                  </button> -->
-                
-                <!-- <div class="divider d-flex align-items-center my-4">
-                  <p class="text-center fw-bold mx-3 mb-0">Or</p>
-                </div> -->
-      
-                <!-- Email input -->
-                
+
 
                 <div class="form-outline mb-4">
                   <input type="email" formControlName="email" id="form3Example3" class="form-control form-control-lg"
@@ -82,7 +63,7 @@ height: 100%;
                       Remember me
                     </label>
                   </div>
-                  <a (click)="showDialog()" class="text-body">Forgot password?</a>
+                  <!-- <a (click)="showDialog()" class="text-body">Forgot password?</a> -->
                 </div>
       
                 <div class="text-center text-lg-start mt-4 pt-2">
@@ -101,23 +82,6 @@ height: 100%;
         
       </section> 
 
-      <p-dialog header="Send otp to Email" [style]="{width: '40vw'}" [(visible)]="display">
-      <div class="dialogform">
-      <form [formGroup]="otpsend" (ngSubmit)="otpsend1()">
-        <label for="email">Email: </label>
-        <div class="row">
-            <div class="col-md-10">
-                <input type="email" formControlName="email" class="form-control" required />
-                <span class="err" *ngIf="loginform.get('email')?.hasError('pattern')">
-                    Please Enter valid email
-                </span>
-            </div>
-            <div class="col-md-2">
-                <button type="submit" class="btn btn-primary" style="width: 100%;">send</button>
-            </div>
-        </div>
-    </form>
-</div>
-</p-dialog>
+     
     </body>
 </html>

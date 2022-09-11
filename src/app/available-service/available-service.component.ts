@@ -27,17 +27,23 @@ export class AvailableServiceComponent implements OnInit {
 
    hospitalSearch(){
     this.searchForm.value.service='hospital'
+    console.log(this.searchForm.value.service);
     
-    this.searchProvider.searchServiceApi(this.searchForm.value).subscribe(resp=>{
-      console.log(resp);
-      localStorage.setItem("availableservice", JSON.stringify(resp));
-         console.log(this.searchForm.value);
-         this.router.navigateByUrl("/listservice")
-         this.toastr.success("Service provider found")
+    localStorage.setItem("pincode",this.searchForm.value.pincode)
+    localStorage.setItem("servicevalue",this.searchForm.value.service)
+    // this.searchProvider.searchServiceApi(this.searchForm.value).subscribe(resp=>{
+    //   console.log(resp);
+    //   //localStorage.setItem("availableservice", JSON.stringify(resp));
+    //   //localStorage.setItem("pincode",resp.searchForm.pincode)
+    //   //localStorage.setItem("service",resp.service)
+    //      console.log(this.searchForm.value);
+    //      this.router.navigateByUrl("/listservice")
+    //      this.toastr.success("Service provider found")
       
-    },err=>{
-      this.toastr.error("service provider not found")
-    })
+    // },err=>{
+    //   this.toastr.error("service provider not found")
+    // })
+    this.router.navigateByUrl("/listservice")
   }
   
   mechanicSearch(){

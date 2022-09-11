@@ -18,4 +18,8 @@ export class SearchproviderService {
   // searchMechanicApi(mechanic: any):Observable<any>{
   //   return this.http.get("http://localhost:9898/search/searchMechanic/"+mechanic)
   // }
+
+  boobAppointmentApi(appointment: any):Observable<any>{
+    return this.http.post("http://localhost:9898/serviceprovider/bookappointment/",appointment)
+  }
 }

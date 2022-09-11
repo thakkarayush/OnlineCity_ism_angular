@@ -15,11 +15,11 @@ export class LoginComponent implements OnInit {
   otpsend: FormGroup;
   display: boolean = false;
 
-
   constructor(private toastr: ToastrService, private router: Router,private sessionService:SessionService) {
     this.loginform = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
       password: new FormControl('', [Validators.required]),
+      
 
     })
     this.otpsend = new FormGroup({
@@ -63,7 +63,7 @@ login(){
         this.router.navigateByUrl("/home")
       } else if (res.data.user.role.roleName == "admin") {
 
-        this.router.navigateByUrl("/dashboard")
+        this.router.navigateByUrl("/admin")
       }
 
 

@@ -44,7 +44,8 @@
 				 
 				</form>
 			</div>
-		  <div *ngIf="firstName" style="color:white">Welcome , {{firstName | uppercase }}
+		  <div *ngIf="firstName" style="color:white">
+			<a routerLink="/viewprofile">Welcome , {{firstName}}</a>
 			<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
 				
 				<a routerLink="/logout" class="btn btn-solid-border btn-round-full">Logout</a>
